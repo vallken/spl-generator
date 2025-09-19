@@ -320,25 +320,29 @@ const FormComponent: React.FC<Props> = ({
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-end space-x-4 mt-8">
+        <div className="flex flex-col sm:flex-row sm:justify-end sm:space-x-4 mt-8 space-y-2 sm:space-y-0">
           <button
             type="button"
             onClick={handleReset}
-            className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full sm:w-auto px-6 py-3 border border-gray-300 text-gray-700 rounded-lg 
+               hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Reset
           </button>
           <button
             type="button"
             onClick={handleSubmit}
-            className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg 
+               hover:from-blue-700 hover:to-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Submit
           </button>
-          <PdfDownloadButton
-            targetUrl={baseUrl + "/preview/" + generatedLink}
-            isSubmit={isSubmit}
-          />
+          <div className="w-full sm:w-auto">
+            <PdfDownloadButton
+              targetUrl={baseUrl + "/preview/" + generatedLink}
+              isSubmit={isSubmit}
+            />
+          </div>
         </div>
       </div>
     </div>
