@@ -107,7 +107,8 @@ const Surat: React.FC<Props> = ({ formData }) => {
               style={{
                 display: "table-cell",
                 width: "50%",
-                textAlign: "right",
+                textAlign: "left",
+                paddingLeft: 70,
               }}
             >
               <p>

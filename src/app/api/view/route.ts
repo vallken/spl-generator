@@ -6,7 +6,6 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { encryptedData } = body;
-    console.log(body);
 
     if (!encryptedData || typeof encryptedData !== "string") {
       return NextResponse.json(
@@ -18,7 +17,6 @@ export async function POST(req: Request) {
       );
     }
     const formData = decryptFormData(encryptedData);
-    console.log("🚀 ~ POST ~ formData:", formData);
 
     return NextResponse.json(
       {

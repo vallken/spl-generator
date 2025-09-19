@@ -33,11 +33,7 @@ export const decryptFormData = (encryptedData: string): FormData => {
   }
 };
 
-export const generateEncryptedLink = (
-  formData: FormData,
-  baseUrl: string = ""
-): string => {
-  console.log({ formData, baseUrl });
+export const generateEncryptedLink = (formData: FormData): string => {
   const encryptedData = encryptFormData(formData);
   return encryptedData;
 };

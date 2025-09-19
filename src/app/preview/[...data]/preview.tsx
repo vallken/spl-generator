@@ -32,7 +32,6 @@ export default function PreviewClient({ data }: Props) {
 
         if (result.success) {
           setFinalForm(result.data);
-          console.log(result.data);
         } else {
           setError(result.message || "Failed to decrypt data");
         }

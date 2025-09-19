@@ -31,7 +31,7 @@ const FormComponent: React.FC<Props> = ({
 
     try {
       setBaseUrl(window.location.origin);
-      const encryptedLink = generateEncryptedLink(formData, baseUrl);
+      const encryptedLink = generateEncryptedLink(formData);
       setGeneratedLink(encryptedLink);
     } catch (error) {
       console.error("Error generating encrypted link:", error);
