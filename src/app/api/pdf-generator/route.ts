@@ -58,12 +58,6 @@ export async function GET(req: Request) {
     const pdf8uint = await page.pdf({
       format: "A4",
       printBackground: true,
-      margin: {
-        top: "20px",
-        right: "20px",
-        bottom: "20px",
-        left: "20px",
-      },
     });
 
     const pdfBuffer = Buffer.from(pdf8uint);
