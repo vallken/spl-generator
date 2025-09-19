@@ -33,12 +33,6 @@ export async function GET(req: Request) {
       );
     }
 
-    if (!process.env.BLESS_TOKEN) {
-      return NextResponse.json(
-        { message: "Server configuration error: Missing BLESS_TOKEN" },
-        { status: 500 }
-      );
-    }
     const executablePath = await chromium.executablePath(
       "https://github.com/Sparticuz/chromium/releases/download/v133.0.0/chromium-v133.0.0-pack.tar"
     );
